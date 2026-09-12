@@ -7,38 +7,40 @@
 <meta name="description" content="Avaliação neuropsicológica para crianças e adolescentes em Arujá/SP. Identificamos as causas por trás de dificuldades de atenção, aprendizagem, memória e comportamento. Agende pelo WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FBF6EE;
-    --paper:#FFFFFF;
-    --ink:#22303A;
-    --ink-soft:#51616B;
-    --ink-faint:#7C8A92;
-    --terracotta:#C1572E;
-    --terracotta-dark:#9E4622;
-    --terracotta-tint:#F5E3DA;
-    --sage:#5B7359;
-    --sage-tint:#E7EDE3;
-    --line:#E4D9C6;
-    --line-soft:#EDE5D5;
-    --gold:#B9822E;
-    --note-bg:#FFF3D8;
-    --note-border:#D9A94B;
-    --note-text:#7A5518;
-    --radius-s:6px;
-    --radius-m:10px;
-    --shadow-card:0 1px 2px rgba(34,48,58,0.06), 0 1px 1px rgba(34,48,58,0.04);
-    --shadow-cta:0 6px 16px rgba(193,87,46,0.28);
+    --bg:#FBF8F3;
+    --bg-soft:#F4EFE6;
+    --bg-card:#FFFFFF;
+    --ink:#1A1530;
+    --ink-soft:#4A4560;
+    --ink-mute:#7A7590;
+    --line:#E8E2D4;
+    --accent:#D99B1A;
+    --accent-soft:#E8B54A;
+    --accent-pale:#FAECC6;
+    --accent-deep:#A3730E;
+    --blue:#2BB5E0;
+    --pink:#E91E8C;
+    --green:#06A77D;
+    --orange:#F77F00;
+    --red:#E63946;
+    --purple:#7B3FA9;
+    --rad:16px;
+    --rad-lg:24px;
+    --shadow-card:0 8px 24px rgba(26,21,48,.06);
+    --shadow-cta:0 12px 32px rgba(217,155,26,.35);
+    --shadow-pill:0 14px 32px rgba(26,21,48,.18);
   }
 
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--cream);
+    background:var(--bg);
     color:var(--ink);
-    font-family:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size:16px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
@@ -47,11 +49,11 @@
   a{color:inherit;}
   h1,h2,h3,h4{
     font-family:'Fraunces', Georgia, 'Times New Roman', serif;
-    font-weight:600;
-    line-height:1.18;
+    font-weight:400;
+    line-height:1.15;
     margin:0 0 0.5em;
     color:var(--ink);
-    letter-spacing:-0.01em;
+    letter-spacing:-0.015em;
   }
   p{margin:0 0 1em;}
   .wrap{
@@ -59,32 +61,24 @@
     margin:0 auto;
     padding:0 24px;
   }
-  section{padding:76px 0;}
+  section{padding:80px 0; position:relative;}
   .section-narrow{max-width:760px;margin:0 auto;}
   .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:0.09em;
-    text-transform:uppercase;
-    color:var(--terracotta-dark);
-    margin-bottom:16px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:20px;height:1px;
-    background:var(--terracotta);
     display:inline-block;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--accent-deep);
+    margin-bottom:18px;
   }
 
   /* Placeholder markers (visible for client to swap later) */
   .ph{
     display:inline-block;
-    background:var(--note-bg);
-    color:var(--note-text);
-    border:1px dashed var(--note-border);
+    background:#FFF3D8;
+    color:#7A5518;
+    border:1px dashed #D9A94B;
     border-radius:4px;
     padding:0 6px;
     font-weight:600;
@@ -93,10 +87,10 @@
   }
   .photo-ph{
     position:relative;
-    border:2px dashed #C9B98D;
-    border-radius:var(--radius-m);
+    border:2px dashed #D8C79A;
+    border-radius:var(--rad-lg);
     background:
-      repeating-linear-gradient(135deg, #F1E8D6 0px, #F1E8D6 10px, #EADFC7 10px, #EADFC7 20px);
+      repeating-linear-gradient(135deg, #F4EFE6 0px, #F4EFE6 10px, #ECE2C8 10px, #ECE2C8 20px);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -106,12 +100,13 @@
     font-size:14px;
     padding:20px;
     min-height:220px;
+    overflow:hidden;
   }
   .photo-ph span{
-    background:rgba(255,255,255,0.86);
+    background:rgba(255,255,255,0.88);
     padding:8px 14px;
-    border-radius:var(--radius-s);
-    border:1px dashed #C9B98D;
+    border-radius:8px;
+    border:1px dashed #D8C79A;
     line-height:1.4;
   }
 
@@ -121,41 +116,41 @@
     align-items:center;
     justify-content:center;
     gap:10px;
-    font-family:'Public Sans', sans-serif;
-    font-weight:700;
-    font-size:16px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:15.5px;
     text-decoration:none;
-    border-radius:var(--radius-s);
-    padding:16px 28px;
+    border-radius:999px;
+    padding:17px 30px;
     border:1px solid transparent;
     cursor:pointer;
-    transition:transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, background-color .2s ease;
   }
   .btn-primary{
-    background:var(--terracotta);
+    background:var(--accent);
     color:#FFFFFF;
     box-shadow:var(--shadow-cta);
   }
-  .btn-primary:hover{background:var(--terracotta-dark); transform:translateY(-1px);}
+  .btn-primary:hover{background:var(--accent-deep); transform:translateY(-2px); box-shadow:0 16px 36px rgba(217,155,26,.42);}
   .btn-primary:active{transform:translateY(0);}
-  .btn-block{width:100%;}
   .btn small{display:block;font-weight:500;font-size:12px;opacity:.85;}
   .wa-icon{flex:none;}
 
   .trust-line{
-    margin-top:14px;
+    margin-top:16px;
     font-size:13.5px;
-    color:var(--ink-soft);
+    color:var(--ink-mute);
     display:flex;
     flex-wrap:wrap;
-    gap:6px 16px;
+    gap:6px 18px;
   }
-  .trust-line span{display:inline-flex;align-items:center;gap:6px;}
-  .dot{width:4px;height:4px;border-radius:50%;background:var(--terracotta);display:inline-block;}
+  .trust-line span{display:inline-flex;align-items:center;gap:7px;}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block;}
 
   /* ===== Top bar ===== */
   .topbar{
-    background:var(--cream);
+    background:rgba(251,248,243,.92);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
     position:sticky;
     top:0;
@@ -176,15 +171,15 @@
   .logotype strong{
     font-family:'Fraunces', serif;
     font-size:21px;
-    font-weight:700;
+    font-weight:500;
     color:var(--ink);
   }
   .logotype em{
     font-style:normal;
     font-size:10.5px;
-    letter-spacing:0.08em;
+    letter-spacing:0.1em;
     text-transform:uppercase;
-    color:var(--terracotta-dark);
+    color:var(--accent-deep);
     font-weight:600;
   }
   .topbar-address{
@@ -197,114 +192,167 @@
   .topbar-cta{
     display:inline-flex;
     flex:none;
-  }
-  .btn-small{
-    padding:11px 18px;
-    font-size:14.5px;
+    padding:11px 20px;
+    font-size:14px;
     box-shadow:none;
   }
 
   /* ===== Hero ===== */
-  .hero{
-    padding:56px 0 64px;
-  }
+  .hero{padding:52px 0 70px; overflow:hidden;}
+  .hero-decor{position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0;}
+  .hero-decor svg{position:absolute; color:var(--accent); opacity:.10; animation:floaty 14s ease-in-out infinite;}
+  .hero-decor svg:nth-child(1){top:10%; left:4%; width:38px; animation-delay:-1s;}
+  .hero-decor svg:nth-child(2){top:68%; left:8%; width:26px; animation-delay:-5s; opacity:.07;}
+  .hero-decor svg:nth-child(3){top:20%; right:6%; width:44px; animation-delay:-8s;}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(-14px) rotate(8deg);}}
+
   .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr 0.85fr;
-    gap:48px;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:56px;
     align-items:center;
+    position:relative;
+    z-index:1;
   }
   .hero h1{
-    font-size:clamp(28px, 3.6vw, 42px);
+    font-size:clamp(28px, 3.7vw, 44px);
     color:var(--ink);
   }
-  .hero h1 mark{
-    background:none;
-    color:var(--terracotta-dark);
-    position:relative;
-    white-space:nowrap;
-  }
   .hero-sub{
-    font-size:17.5px;
+    font-size:17px;
     color:var(--ink-soft);
-    max-width:52ch;
+    max-width:50ch;
   }
+  .hero-visual{position:relative;}
   .hero-photo{aspect-ratio:4/5;}
-  .hero-photo-caption{
-    margin-top:10px;
+  .hero-pill{
+    position:absolute;
+    top:-14px; right:-10px;
+    z-index:3;
+    background:rgba(251,248,243,.97);
+    backdrop-filter:blur(14px);
+    border-radius:14px;
+    padding:12px 18px;
+    box-shadow:var(--shadow-pill);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    max-width:200px;
+    animation:pillFloat 5s ease-in-out infinite;
+  }
+  @keyframes pillFloat{0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);}}
+  .hero-pill .ic{
+    flex:none; width:30px; height:30px; border-radius:9px;
+    background:var(--accent-pale); color:var(--accent-deep);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-pill .tx{font-size:12.5px; font-weight:600; color:var(--ink); line-height:1.25;}
+  .hero-badge{
+    position:absolute;
+    bottom:18px; left:18px;
+    z-index:3;
+    background:rgba(251,248,243,.96);
+    backdrop-filter:blur(10px);
+    padding:10px 16px;
+    border-radius:999px;
+    box-shadow:var(--shadow-pill);
+    display:flex;
+    align-items:center;
+    gap:10px;
     font-size:12.5px;
-    color:var(--ink-faint);
+    font-weight:600;
+    color:var(--ink);
+  }
+  .live-dot{width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px rgba(6,167,125,.18); flex:none;}
+  .hero-photo-caption{
+    margin-top:38px;
+    font-size:12.5px;
+    color:var(--ink-mute);
     text-align:center;
   }
 
-  /* ===== Symptom checklist ===== */
-  .symptoms{
-    background:var(--paper);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+  /* ===== Ticker ===== */
+  .ticker{
+    padding:26px 0;
+    overflow:hidden;
+    background:var(--ink);
   }
+  .ticker-track{
+    display:flex;
+    gap:44px;
+    white-space:nowrap;
+    width:max-content;
+    animation:scroll 32s linear infinite;
+  }
+  .ticker-track span{
+    font-family:'Fraunces', serif;
+    font-weight:300;
+    font-style:italic;
+    font-size:clamp(1.1rem, 1.8vw, 1.5rem);
+    color:var(--bg);
+    letter-spacing:-.005em;
+    display:inline-flex;
+    align-items:center;
+    gap:44px;
+  }
+  .ticker-track span::after{content:"·"; color:var(--accent); font-style:normal; font-size:1.4em; line-height:.5;}
+  @keyframes scroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+  /* ===== Symptom cards (numbered, brand style) ===== */
+  .symptoms{background:var(--bg-soft);}
   .symptom-grid{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    gap:0;
-    margin-top:36px;
-    border-top:1px solid var(--line-soft);
-    border-left:1px solid var(--line-soft);
+    gap:22px;
+    margin-top:40px;
   }
   .symptom-card{
-    padding:28px 32px;
-    border-right:1px solid var(--line-soft);
-    border-bottom:1px solid var(--line-soft);
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:var(--rad-lg);
+    padding:34px 32px;
+    box-shadow:var(--shadow-card);
+  }
+  .symptom-num{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:var(--accent);
+    margin-bottom:16px;
+    display:block;
   }
   .symptom-card h3{
-    font-size:16px;
-    font-family:'Public Sans', sans-serif;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.03em;
-    color:var(--terracotta-dark);
+    font-size:18px;
+    font-weight:500;
     margin-bottom:14px;
   }
-  .symptom-card ul{
-    list-style:none;
-    margin:0;
-    padding:0;
-  }
+  .symptom-card ul{list-style:none; margin:0; padding:0;}
   .symptom-card li{
     position:relative;
-    padding-left:26px;
-    margin-bottom:11px;
-    color:var(--ink);
+    padding-left:22px;
+    margin-bottom:10px;
+    color:var(--ink-soft);
     font-size:15px;
   }
   .symptom-card li:last-child{margin-bottom:0;}
   .symptom-card li::before{
     content:"";
-    position:absolute;
-    left:0;
-    top:7px;
-    width:11px;
-    height:6px;
-    border-left:2px solid var(--sage);
-    border-bottom:2px solid var(--sage);
-    transform:rotate(-45deg);
+    position:absolute; left:0; top:8px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
   }
   .symptoms-foot{
-    margin-top:32px;
-    padding-top:28px;
-    border-top:1px solid var(--line-soft);
+    margin-top:40px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:24px;
     flex-wrap:wrap;
   }
-  .symptoms-foot p{
-    margin:0;
-    max-width:52ch;
-    font-size:16px;
-    color:var(--ink-soft);
-  }
+  .symptoms-foot p{margin:0; max-width:52ch; font-size:16px; color:var(--ink-soft);}
   .symptoms-foot strong{color:var(--ink);}
 
   /* ===== Explainer ===== */
@@ -316,21 +364,17 @@
   }
   .explainer-grid p{color:var(--ink-soft); font-size:16px;}
   .pull-note{
-    background:var(--sage-tint);
-    border-left:3px solid var(--sage);
-    padding:20px 24px;
-    border-radius:0 var(--radius-s) var(--radius-s) 0;
+    background:var(--accent-pale);
+    border-left:3px solid var(--accent);
+    padding:22px 26px;
+    border-radius:0 var(--rad) var(--rad) 0;
     font-size:15px;
-    color:#3C4E3A;
+    color:var(--accent-deep);
   }
-  .pull-note strong{color:#2E3E2C;}
+  .pull-note strong{color:#7A5310;}
 
   /* ===== Steps ===== */
-  .steps{
-    background:var(--paper);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
+  .steps{background:var(--bg-soft);}
   .steps-grid{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -338,111 +382,110 @@
     margin-top:40px;
   }
   .step{
-    border-top:2px solid var(--terracotta);
-    padding-top:18px;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:var(--rad-lg);
+    padding:28px 24px;
   }
   .step-num{
     font-family:'Fraunces', serif;
-    font-size:34px;
-    color:var(--terracotta);
-    font-weight:600;
-    margin-bottom:6px;
+    font-style:italic;
+    font-size:26px;
+    color:var(--accent);
+    font-weight:400;
+    margin-bottom:10px;
     display:block;
   }
-  .step h4{font-size:16.5px; margin-bottom:8px;}
+  .step h4{font-size:16.5px; font-weight:500; margin-bottom:8px;}
   .step p{font-size:14.5px; color:var(--ink-soft); margin:0;}
 
   /* ===== Why us ===== */
   .whyus-grid{
     display:grid;
     grid-template-columns:0.85fr 1.15fr;
-    gap:48px;
+    gap:52px;
     align-items:center;
   }
-  .whyus-list{
-    list-style:none;
-    margin:24px 0 0;
-    padding:0;
-  }
+  .whyus-list{list-style:none; margin:24px 0 0; padding:0;}
   .whyus-list li{
     display:flex;
-    gap:14px;
-    padding:16px 0;
-    border-bottom:1px solid var(--line-soft);
+    gap:16px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
   }
   .whyus-list li:first-child{padding-top:0;}
   .whyus-num{
     font-family:'Fraunces', serif;
-    color:var(--terracotta);
-    font-weight:600;
-    font-size:15px;
+    font-style:italic;
+    color:var(--accent);
+    font-size:17px;
     flex:none;
     width:22px;
   }
   .whyus-list h4{
-    font-family:'Public Sans', sans-serif;
+    font-family:'Inter', sans-serif;
     font-size:16px;
-    font-weight:700;
+    font-weight:600;
     margin:0 0 4px;
     color:var(--ink);
   }
   .whyus-list p{margin:0; font-size:14.5px; color:var(--ink-soft);}
-  .credential-photo{aspect-ratio:3/4; max-width:340px;}
+  .credential-photo{aspect-ratio:3/4; max-width:340px; position:relative;}
+  .credential-badge{
+    position:absolute; bottom:16px; left:16px; right:16px;
+    background:rgba(251,248,243,.96);
+    backdrop-filter:blur(10px);
+    border-radius:14px;
+    padding:12px 16px;
+    box-shadow:var(--shadow-pill);
+    display:flex; align-items:center; gap:10px;
+  }
+  .credential-badge .ic{
+    flex:none; width:32px; height:32px; border-radius:9px;
+    background:var(--accent-pale); color:var(--accent-deep);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .credential-badge .tx{font-size:12px; line-height:1.3; color:var(--ink);}
+  .credential-badge .tx strong{display:block; font-size:12.5px;}
+
+  .specialty-tags{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin-top:32px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .tag{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:500; color:var(--ink-soft);
+    background:var(--bg-card); border:1px solid var(--line);
+    border-radius:999px; padding:7px 14px;
+  }
+  .tag.current{background:var(--ink); color:var(--bg); border-color:var(--ink); font-weight:600;}
+  .tag .tdot{width:7px; height:7px; border-radius:50%; flex:none;}
 
   /* ===== Testimonials ===== */
-  .testimonials{
-    background:var(--paper);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .testi-head{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .testi-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:24px;
-    margin-top:36px;
-  }
+  .testimonials{background:var(--bg-soft);}
+  .testi-head{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  .testi-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; margin-top:36px;}
   .testi-card{
-    background:var(--cream);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius-m);
-    padding:26px;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:var(--rad-lg);
+    padding:28px;
+    box-shadow:var(--shadow-card);
   }
-  .testi-stars{
-    color:var(--gold);
-    font-size:15px;
-    letter-spacing:2px;
-    margin-bottom:12px;
-  }
-  .testi-card p.quote{
-    font-size:15px;
-    color:var(--ink);
-    font-style:italic;
-  }
-  .testi-name{
-    font-size:13.5px;
-    font-weight:700;
-    color:var(--ink-soft);
-    margin-top:14px;
-  }
+  .testi-stars{color:var(--accent); font-size:15px; letter-spacing:2px; margin-bottom:14px;}
+  .testi-card p.quote{font-size:15px; color:var(--ink); font-style:italic;}
+  .testi-name{font-size:13.5px; font-weight:600; color:var(--ink-soft); margin-top:14px;}
 
   /* ===== FAQ ===== */
   .faq-list{margin-top:32px;}
-  details{
-    border-bottom:1px solid var(--line-soft);
-    padding:20px 0;
-  }
-  details:first-child{border-top:1px solid var(--line-soft);}
+  details{border-bottom:1px solid var(--line); padding:22px 0;}
+  details:first-child{border-top:1px solid var(--line);}
   summary{
     cursor:pointer;
     font-family:'Fraunces', serif;
-    font-weight:600;
+    font-weight:500;
     font-size:18px;
     list-style:none;
     display:flex;
@@ -454,118 +497,80 @@
   summary::-webkit-details-marker{display:none;}
   summary::after{
     content:"+";
-    font-family:'Public Sans', sans-serif;
+    font-family:'Inter', sans-serif;
     font-size:22px;
     font-weight:400;
-    color:var(--terracotta);
+    color:var(--accent);
     flex:none;
     transition:transform .15s ease;
   }
-  details[open] summary::after{
-    content:"–";
-  }
-  details p{
-    margin:14px 0 0;
-    color:var(--ink-soft);
-    font-size:15.5px;
-    max-width:70ch;
-  }
+  details[open] summary::after{content:"–";}
+  details p{margin:14px 0 0; color:var(--ink-soft); font-size:15.5px; max-width:70ch;}
 
   /* ===== Final CTA / location ===== */
-  .final-cta{
-    background:var(--ink);
-    color:#F4EEE1;
-  }
+  .final-cta{background:var(--ink); color:#F2EEE3;}
   .final-cta h2{color:#FFFFFF;}
-  .final-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:48px;
-    align-items:center;
-  }
-  .final-cta p{color:#C9D2D6;}
-  .final-cta .btn-primary{box-shadow:0 6px 20px rgba(0,0,0,0.35);}
-  .address-block{
-    margin-top:22px;
-    font-size:15px;
-    color:#EDE7D8;
-    display:flex;
-    gap:10px;
-  }
-  .map-frame{
-    border:0;
-    width:100%;
-    aspect-ratio:4/3;
-    border-radius:var(--radius-m);
-    filter:grayscale(0.15) contrast(1.02);
-  }
-  .final-cta .trust-line span{color:#B7C1C6;}
-  .final-cta .trust-line .dot{background:var(--terracotta);}
+  .final-cta .eyebrow{color:var(--accent-soft);}
+  .final-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .final-cta p{color:#C4BFD4;}
+  .final-cta .btn-primary{box-shadow:0 14px 34px rgba(217,155,26,.32);}
+  .address-block{margin-top:24px; font-size:15px; color:#E9E4D4; display:flex; gap:10px;}
+  .map-frame{border:0; width:100%; aspect-ratio:4/3; border-radius:var(--rad-lg); filter:grayscale(0.1) contrast(1.02);}
+  .final-cta .trust-line span{color:#A79FBE;}
 
   /* ===== Footer ===== */
-  footer{
-    background:#1B2830;
-    color:#93A2A9;
-    padding:40px 0 100px;
-    font-size:13.5px;
-  }
+  footer{background:#140F26; color:#9089A6; padding:44px 0 104px; font-size:13.5px;}
   .footer-grid{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:24px;
-    padding-bottom:24px;
-    border-bottom:1px solid #2C3A42;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px;
+    padding-bottom:26px; border-bottom:1px solid #2A2340;
   }
-  footer .logotype strong{color:#F4EEE1;}
-  footer .logotype em{color:#D98F4E;}
+  footer .logotype strong{color:#F2EEE3;}
+  footer .logotype em{color:var(--accent-soft);}
   footer address{font-style:normal; line-height:1.7;}
-  .footer-legal{
-    margin-top:20px;
-    line-height:1.7;
-  }
+  .footer-legal{margin-top:20px; line-height:1.7;}
 
   /* ===== Sticky mobile CTA ===== */
-  .sticky-cta{
-    display:none;
-  }
+  .sticky-cta{display:none;}
 
   /* ===== Responsive ===== */
   @media (max-width: 880px){
-    section{padding:52px 0;}
-    .hero{padding:32px 0 40px;}
-    .hero-grid{grid-template-columns:1fr; gap:32px;}
-    .hero-photo{order:-1; aspect-ratio:16/10;}
+    section{padding:56px 0;}
+    .hero{padding:32px 0 44px;}
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .hero-visual{order:-1;}
+    .hero-photo{aspect-ratio:16/10;}
+    .hero-photo-caption{margin-top:32px;}
     .symptom-grid{grid-template-columns:1fr;}
     .explainer-grid{grid-template-columns:1fr; gap:32px;}
-    .steps-grid{grid-template-columns:repeat(2,1fr); gap:32px 24px;}
-    .whyus-grid{grid-template-columns:1fr; gap:28px;}
+    .steps-grid{grid-template-columns:repeat(2,1fr); gap:20px;}
+    .whyus-grid{grid-template-columns:1fr; gap:32px;}
     .credential-photo{max-width:100%; aspect-ratio:16/10;}
-    .testi-grid{grid-template-columns:1fr; gap:18px;}
+    .testi-grid{grid-template-columns:1fr; gap:16px;}
     .final-grid{grid-template-columns:1fr; gap:32px;}
     .topbar-address{display:none;}
     .topbar-cta{display:none;}
     .footer-grid{flex-direction:column;}
 
-    body{padding-bottom:76px;}
+    body{padding-bottom:80px;}
     .sticky-cta{
       display:flex;
       position:fixed;
       left:0; right:0; bottom:0;
       z-index:60;
-      background:var(--paper);
+      background:var(--bg-card);
       border-top:1px solid var(--line);
-      padding:10px 16px;
-      box-shadow:0 -4px 14px rgba(0,0,0,0.08);
+      padding:12px 16px;
+      box-shadow:0 -6px 18px rgba(26,21,48,.10);
     }
     .sticky-cta .btn{width:100%;}
   }
 
   @media (max-width: 560px){
     .wrap{padding:0 18px;}
-    section{padding:44px 0;}
+    section{padding:48px 0;}
     .steps-grid{grid-template-columns:1fr 1fr;}
-    h1{font-size:26px !important;}
+    h1{font-size:27px !important;}
+    .hero-pill{max-width:170px; padding:10px 14px;}
   }
 </style>
 </head>
@@ -582,8 +587,8 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
         Alameda dos Crisântemos, 480 — Arujá/SP
       </div>
-      <a class="btn btn-primary btn-small topbar-cta" href="https://api.whatsapp.com/send/?phone=5511916676787&text=Ol%C3%A1%2C%20vim%20do%20google%20e%20quero%20agendar%20minha%20consulta%20com%20Neuropsicologia&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-        <svg class="wa-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.08L2 22l5.08-1.33A9.96 9.96 0 0 0 12.02 22C17.5 22 22 17.52 22 12S17.5 2 12.02 2zm5.83 14.2c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.02.26-3.4-.71-2.87-1.18-4.72-4.05-4.86-4.24-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.08 1-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.31.31-.13.6.17.29.77 1.26 1.65 2.04 1.14 1.01 2.1 1.33 2.39 1.48.29.15.46.13.63-.08.17-.21.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
+      <a class="btn btn-primary topbar-cta" href="https://api.whatsapp.com/send/?phone=5511916676787&text=Ol%C3%A1%2C%20vim%20do%20google%20e%20quero%20agendar%20minha%20consulta%20com%20Neuropsicologia&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+        <svg class="wa-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.08L2 22l5.08-1.33A9.96 9.96 0 0 0 12.02 22C17.5 22 22 17.52 22 12S17.5 2 12.02 2zm5.83 14.2c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.02.26-3.4-.71-2.87-1.18-4.72-4.05-4.86-4.24-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.08 1-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.31.31-.13.6.17.29.77 1.26 1.65 2.04 1.14 1.01 2.1 1.33 2.39 1.48.29.15.46.13.63-.08.17-.21.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
         Agendar no WhatsApp
       </a>
     </div>
@@ -591,6 +596,11 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero">
+    <div class="hero-decor">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c1.5 3 4 4.5 7 4.5-1 3-1 6 0 9-3 0-5.5 1.5-7 4.5-1.5-3-4-4.5-7-4.5 1-3 1-6 0-9 3 0 5.5-1.5 7-4.5z"/></svg>
+    </div>
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Avaliação Neuropsicológica · Arujá/SP</div>
@@ -606,14 +616,32 @@
           <span><span class="dot"></span>Sem compromisso</span>
         </div>
       </div>
-      <div>
+      <div class="hero-visual">
         <div class="photo-ph hero-photo">
           <span>[FOTO: profissional do Instituto Evoluaba durante atendimento com criança/adolescente]</span>
+        </div>
+        <div class="hero-pill">
+          <span class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <span class="tx">Compreensão<br>aprofundada</span>
+        </div>
+        <div class="hero-badge">
+          <span class="live-dot"></span>
+          Atendimento individualizado
         </div>
         <p class="hero-photo-caption">Instituto Evoluaba — Alameda dos Crisântemos, 480, Jardim Nova Arujá, Arujá/SP</p>
       </div>
     </div>
   </section>
+
+  <!-- ===== Ticker ===== -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>TDAH</span><span>Dificuldade de Aprendizagem</span><span>Memória</span><span>Atenção</span><span>Comportamento</span><span>Impulsividade</span><span>Dislexia</span><span>Neurodesenvolvimento</span><span>Avaliação Neuropsicológica</span><span>Arujá/SP</span>
+      <span>TDAH</span><span>Dificuldade de Aprendizagem</span><span>Memória</span><span>Atenção</span><span>Comportamento</span><span>Impulsividade</span><span>Dislexia</span><span>Neurodesenvolvimento</span><span>Avaliação Neuropsicológica</span><span>Arujá/SP</span>
+    </div>
+  </div>
 
   <!-- ===== Symptom checklist ===== -->
   <section class="symptoms">
@@ -624,6 +652,7 @@
 
       <div class="symptom-grid">
         <div class="symptom-card">
+          <span class="symptom-num">i.</span>
           <h3>Atenção e comportamento</h3>
           <ul>
             <li>Distrai-se com facilidade, mesmo em tarefas curtas</li>
@@ -634,6 +663,7 @@
           </ul>
         </div>
         <div class="symptom-card">
+          <span class="symptom-num">ii.</span>
           <h3>Aprendizagem escolar</h3>
           <ul>
             <li>Tira notas baixas mesmo estudando bastante</li>
@@ -643,6 +673,7 @@
           </ul>
         </div>
         <div class="symptom-card">
+          <span class="symptom-num">iii.</span>
           <h3>Memória e raciocínio</h3>
           <ul>
             <li>Esquece instruções simples poucos minutos depois de ouvi-las</li>
@@ -652,6 +683,7 @@
           </ul>
         </div>
         <div class="symptom-card">
+          <span class="symptom-num">iv.</span>
           <h3>Desenvolvimento e convívio social</h3>
           <ul>
             <li>Atraso na fala ou dificuldade para se comunicar</li>
@@ -695,27 +727,27 @@
       <h2>Da primeira conversa até o laudo em mãos</h2>
       <div class="steps-grid">
         <div class="step">
-          <span class="step-num">01</span>
+          <span class="step-num">i.</span>
           <h4>Anamnese</h4>
           <p>Conversa inicial com a família para entender a história, as queixas e o contexto escolar do seu filho.</p>
         </div>
         <div class="step">
-          <span class="step-num">02</span>
+          <span class="step-num">ii.</span>
           <h4>Sessões de avaliação</h4>
           <p>Aplicação de testes e instrumentos padronizados, em ambiente acolhedor e no ritmo da criança ou adolescente.</p>
         </div>
         <div class="step">
-          <span class="step-num">03</span>
+          <span class="step-num">iii.</span>
           <h4>Análise e integração</h4>
           <p>Cruzamento dos resultados com as informações da família e, quando necessário, contato com a escola.</p>
         </div>
         <div class="step">
-          <span class="step-num">04</span>
+          <span class="step-num">iv.</span>
           <h4>Devolutiva com laudo</h4>
           <p>Reunião para explicar os resultados em linguagem clara, com orientações práticas e encaminhamentos, se preciso.</p>
         </div>
       </div>
-      <p style="margin-top:36px; font-size:14.5px; color:var(--ink-faint);">Tempo médio do processo completo: <span class="ph">[X semanas / X sessões — confirmar prazo atual]</span>. O ritmo exato varia de acordo com a idade e a queixa.</p>
+      <p style="margin-top:32px; font-size:14.5px; color:var(--ink-mute);">Tempo médio do processo completo: <span class="ph">[X semanas / X sessões — confirmar prazo atual]</span>. O ritmo exato varia de acordo com a idade e a queixa.</p>
     </div>
   </section>
 
@@ -725,6 +757,12 @@
       <div>
         <div class="photo-ph credential-photo">
           <span>[FOTO: equipe / profissional responsável pela avaliação]</span>
+          <div class="credential-badge">
+            <span class="ic">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.6L22 9l-5.2 4.6L18.2 22 12 17.8 5.8 22l1.4-8.4L2 9l7.4-.4L12 2z"/></svg>
+            </span>
+            <span class="tx"><strong>Neuropsicologia</strong>Avaliação com profundidade</span>
+          </div>
         </div>
       </div>
       <div>
@@ -732,34 +770,44 @@
         <h2>Uma clínica pensada para o neurodesenvolvimento infantil e adolescente</h2>
         <ul class="whyus-list">
           <li>
-            <span class="whyus-num">01</span>
+            <span class="whyus-num">i.</span>
             <div>
               <h4>Especialização em crianças e adolescentes</h4>
               <p>Não somos uma clínica geral — trabalhamos especificamente com neurodesenvolvimento infantil e adolescente, do primeiro contato à devolutiva.</p>
             </div>
           </li>
           <li>
-            <span class="whyus-num">02</span>
+            <span class="whyus-num">ii.</span>
             <div>
               <h4>Atendimento conduzido por <span class="ph">[NOME DO(A) PROFISSIONAL RESPONSÁVEL — CRP Nº XXXXX]</span></h4>
               <p>Avaliação aplicada e supervisionada por profissional especializado em neuropsicologia do desenvolvimento.</p>
             </div>
           </li>
           <li>
-            <span class="whyus-num">03</span>
+            <span class="whyus-num">iii.</span>
             <div>
               <h4>Laudo aceito por escolas e médicos</h4>
               <p>Documento completo, que pode ser apresentado à escola, ao pediatra ou ao psiquiatra responsável pelo acompanhamento.</p>
             </div>
           </li>
           <li>
-            <span class="whyus-num">04</span>
+            <span class="whyus-num">iv.</span>
             <div>
               <h4>Presencial, em Arujá</h4>
               <p>Atendimento na Alameda dos Crisântemos, 480, Jardim Nova Arujá — sem precisar se deslocar até a capital.</p>
             </div>
           </li>
         </ul>
+
+        <div class="specialty-tags">
+          <span class="tag current"><span class="tdot" style="background:var(--accent-soft);"></span>Neuropsicologia</span>
+          <span class="tag"><span class="tdot" style="background:var(--blue);"></span>Fonoaudiologia</span>
+          <span class="tag"><span class="tdot" style="background:var(--pink);"></span>Psicologia</span>
+          <span class="tag"><span class="tdot" style="background:var(--orange);"></span>Terapia ABA</span>
+          <span class="tag"><span class="tdot" style="background:var(--green);"></span>Psicomotricidade</span>
+          <span class="tag"><span class="tdot" style="background:var(--red);"></span>Terapia Ocupacional</span>
+          <span class="tag"><span class="tdot" style="background:var(--purple);"></span>Musicoterapia</span>
+        </div>
       </div>
     </div>
   </section>
@@ -836,7 +884,7 @@
   <section class="final-cta">
     <div class="wrap final-grid">
       <div>
-        <div class="eyebrow" style="color:#E3A468;">Dê o primeiro passo</div>
+        <div class="eyebrow">Dê o primeiro passo</div>
         <h2>Você não precisa ter todas as respostas hoje — só precisar começar.</h2>
         <p>Fale agora com a nossa equipe pelo WhatsApp e entenda como funciona a avaliação neuropsicológica para o seu filho.</p>
         <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=5511916676787&text=Ol%C3%A1%2C%20vim%20do%20google%20e%20quero%20agendar%20minha%20consulta%20com%20Neuropsicologia&type=phone_number&app_absent=0" target="_blank" rel="noopener">
