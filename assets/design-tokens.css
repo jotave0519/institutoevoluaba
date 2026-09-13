@@ -1,0 +1,46 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-primary-50: #FFFFFF;
+  --primitive-color-primary-100: #FFFFE6;
+  --primitive-color-primary-200: #FFFFB3;
+  --primitive-color-primary-300: #FFFF80;
+  --primitive-color-primary-400: #FFCE4D;
+  --primitive-color-primary-500: #D99B1A;
+  --primitive-color-primary-600: #A3730E;
+  --primitive-color-primary-700: #8D4F00;
+  --primitive-color-primary-800: #662800;
+  --primitive-color-primary-900: #400200;
+  --primitive-color-secondary-50: #FFFBFF;
+  --primitive-color-secondary-100: #E6E1FC;
+  --primitive-color-secondary-200: #B3AEC9;
+  --primitive-color-secondary-300: #807B96;
+  --primitive-color-secondary-400: #4D4863;
+  --primitive-color-secondary-500: #1A1530;
+  --primitive-color-secondary-600: #00000A;
+  --primitive-color-secondary-700: #000000;
+  --primitive-color-secondary-800: #000000;
+  --primitive-color-secondary-900: #000000;
+  --primitive-color-accent-50: #FFFFFF;
+  --primitive-color-accent-100: #FFFFFF;
+  --primitive-color-accent-200: #FFFFE3;
+  --primitive-color-accent-300: #FFFFB0;
+  --primitive-color-accent-400: #FFE87D;
+  --primitive-color-accent-500: #E8B54A;
+  --primitive-color-accent-600: #C28F24;
+  --primitive-color-accent-700: #9C6900;
+  --primitive-color-accent-800: #754200;
+  --primitive-color-accent-900: #4F1C00;
+}
+
+/* === SEMANTIC === */
+:root {
+
+}
+
+/* === COMPONENTS === */
+:root {
+
+}
